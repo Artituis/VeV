@@ -74,14 +74,71 @@ public class BarcaTest {
 
     @Test 
     public void testeDistribuicaoPesoA1B2(){
-        int quantidade = 0;
-        for(int assento = 1; assento<=20; assento++){
-            for(int fila=5; fila<=10; fila++){
-                quantidade++;
+        for(int fila=2; fila<8; fila++){
+            for(int assento = 1; assento<=20; assento++){
                 barca.ocupaLugarSemVerificacao(fila, assento);
             }
         }
-        System.out.println(quantidade);
-        //Assertions.assertEquals(2, barca.ocupaLugar("F01A01"));
+        Assertions.assertEquals(2, barca.ocupaLugar("F01A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA1B3(){
+        for(int fila=2; fila<13; fila++){
+            for(int assento = 1; assento<=20; assento++){
+                barca.ocupaLugarSemVerificacao(fila, assento);
+            }
+        }
+        Assertions.assertEquals(3, barca.ocupaLugar("F01A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA2B1(){
+        Assertions.assertEquals(2, barca.ocupaLugar("F21A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA2B2(){
+        for(int fila=2; fila<8; fila++){
+            for(int assento = 1; assento<=20; assento++){
+                barca.ocupaLugarSemVerificacao(fila, assento);
+            }
+        }
+        Assertions.assertEquals(2, barca.ocupaLugar("F21A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA2B3(){
+        for(int fila=2; fila<13; fila++){
+            for(int assento = 1; assento<=20; assento++){
+                barca.ocupaLugarSemVerificacao(fila, assento);
+            }
+        }
+        Assertions.assertEquals(3, barca.ocupaLugar("F21A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA3B1(){
+        Assertions.assertEquals(2, barca.ocupaLugar("F40A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA3B2(){
+        for(int fila=2; fila<8; fila++){
+            for(int assento = 1; assento<=20; assento++){
+                barca.ocupaLugarSemVerificacao(fila, assento);
+            }
+        }
+        Assertions.assertEquals(3, barca.ocupaLugar("F40A01"));
+    }
+
+    @Test 
+    public void testeDistribuicaoPesoA3B3(){
+        for(int fila=2; fila<13; fila++){
+            for(int assento = 1; assento<=20; assento++){
+                barca.ocupaLugarSemVerificacao(fila, assento);
+            }
+        }
+        Assertions.assertEquals(3, barca.ocupaLugar("F40A01"));
     }
 }
