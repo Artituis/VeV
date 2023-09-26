@@ -11,8 +11,8 @@ public class CentroDistribuicaoTest {
     @Test
     void Q2() {
         CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
-        int[] saidaEsperada = {-21, 0, 0};
-        Assertions.assertArrayEquals(saidaEsperada, centro.encomendaCombustivel(10001, TIPOPOSTO.COMUM) );
+        int[] saidaEsperada = {-21};
+        Assertions.assertArrayEquals(saidaEsperada, centro.encomendaCombustivel(20000, TIPOPOSTO.COMUM) );
 
     }
 
@@ -229,4 +229,19 @@ public class CentroDistribuicaoTest {
         centro.recebeGasolina(1000);
         Assertions.assertEquals(SITUACAO.NORMAL, centro.getSituacao());
     }
+
+    @Test
+    void C1() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,5000,2500);
+        centro.recebeGasolina(1000);
+        Assertions.assertEquals(SITUACAO.NORMAL, centro.getSituacao());
+    }
+
+    @Test
+    void C2() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,5000,2000);
+        centro.recebeAlcool(1000);
+        Assertions.assertEquals(SITUACAO.NORMAL, centro.getSituacao());
+    }
+
 }

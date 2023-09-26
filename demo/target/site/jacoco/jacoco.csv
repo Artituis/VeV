@@ -4,4 +4,4 @@ demo,default,CentroDistribuicao.SITUACAO,21,0,0,0,2,0,1,0,1,0
 demo,default,CentroDistribuicao.TIPOPOSTO,15,0,0,0,2,0,1,0,1,0
 demo,com.example,CentroDistribuicao.TIPOPOSTO,0,24,0,0,0,2,0,1,0,1
 demo,com.example,CentroDistribuicao.SITUACAO,0,34,0,0,0,2,0,1,0,1
-demo,com.example,CentroDistribuicao,58,297,20,48,16,56,23,21,3,7
+demo,com.example,CentroDistribuicao,51,304,19,49,15,57,22,22,3,7
