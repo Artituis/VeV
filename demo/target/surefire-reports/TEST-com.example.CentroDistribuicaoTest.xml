@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.CentroDistribuicaoTest" time="0.188" tests="31" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.CentroDistribuicaoTest" time="0.215" tests="31" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/home/gitpod/.sdkman/candidates/java/17.0.8.1-tem/lib"/>
-    <property name="sun.java.command" value="/workspace/VeV/demo/target/surefire/surefirebooter-20230926224811024_3.jar /workspace/VeV/demo/target/surefire 2023-09-26T22-48-10_913-jvmRun1 surefire-20230926224811024_1tmp surefire_0-20230926224811024_2tmp"/>
+    <property name="sun.java.command" value="/workspace/VeV/demo/target/surefire/surefirebooter-20230926225713113_3.jar /workspace/VeV/demo/target/surefire 2023-09-26T22-57-13_007-jvmRun1 surefire-20230926225713113_1tmp surefire_0-20230926225713113_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspace/VeV/demo/target/test-classes:/workspace/VeV/demo/target/classes:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/workspace/m2-repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/workspace/m2-repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/workspace/m2-repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/workspace/m2-repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/workspace/m2-repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/workspace/m2-repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/workspace/m2-repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/workspace/m2-repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/workspace/VeV/demo/target/surefire/surefirebooter-20230926224811024_3.jar"/>
+    <property name="surefire.real.class.path" value="/workspace/VeV/demo/target/surefire/surefirebooter-20230926225713113_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.8.1+1"/>
     <property name="user.name" value="gitpod"/>
@@ -52,35 +52,35 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Q1T1S1" classname="com.example.CentroDistribuicaoTest" time="0.045"/>
-  <testcase name="Q1T1S2" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
-  <testcase name="Q1T1S3" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="Q1T1S1" classname="com.example.CentroDistribuicaoTest" time="0.098"/>
+  <testcase name="Q1T1S2" classname="com.example.CentroDistribuicaoTest" time="0.002"/>
+  <testcase name="Q1T1S3" classname="com.example.CentroDistribuicaoTest" time="0.002"/>
   <testcase name="Q1T2S1" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
-  <testcase name="Q1T2S2" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="Q1T2S2" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
   <testcase name="Q1T2S3" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="ENTRADA_INVALIDA" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
-  <testcase name="C1" classname="com.example.CentroDistribuicaoTest" time="0.004"/>
+  <testcase name="C1" classname="com.example.CentroDistribuicaoTest" time="0.005"/>
   <testcase name="C2" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="L1" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="L2" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
-  <testcase name="L3" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
+  <testcase name="L3" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="L4" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="L5" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
+  <testcase name="L5" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="L6" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="L7" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="L8" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
+  <testcase name="L7" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="L8" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="L9" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="M1" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
   <testcase name="M2" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M3" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M4" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M5" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M6" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M7" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M8" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="M9" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="Q2" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="L10" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
-  <testcase name="L11" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
-  <testcase name="L12" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M3" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M4" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M5" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M6" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M7" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M8" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="M9" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="Q2" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="L10" classname="com.example.CentroDistribuicaoTest" time="0.001"/>
+  <testcase name="L11" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
+  <testcase name="L12" classname="com.example.CentroDistribuicaoTest" time="0.0"/>
 </testsuite>

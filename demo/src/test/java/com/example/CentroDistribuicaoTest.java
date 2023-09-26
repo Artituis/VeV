@@ -240,8 +240,32 @@ public class CentroDistribuicaoTest {
     @Test
     void C2() {
         CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
-        centro.recebeAlcool(1000);
+        centro.recebeAditivo(1000);
         Assertions.assertEquals(SITUACAO.NORMAL, centro.getSituacao());
+    }
+    void C3() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);    
+        Assertions.assertEquals(500, centro.gettAditivo());
+    }
+    void C4() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);    
+        Assertions.assertEquals(10000, centro.gettGasolina());
+    }
+    void C5() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);    
+        Assertions.assertEquals(2500, centro.gettAlcool());
+    }
+    void C6() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
+        Assertions.assertEquals(-1, centro.recebeGasolina(-10));
+    }
+    void C7() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
+        Assertions.assertEquals(-1, centro.recebeAlcool(-10));
+    }
+    void C8() {
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
+        Assertions.assertEquals(-1, centro.recebeAditivo(-10));
     }
 
 }

@@ -66,12 +66,12 @@ public class CentroDistribuicao {
 <span class="pc bpc" id="L66" title="1 of 2 branches missed.">        if (qtdade &lt; 0) {</span>
 <span class="nc" id="L67">            return -1;</span>
         }
-<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (tAditivo + qtdade &gt; MAX_ADITIVO) {</span>
-<span class="nc" id="L70">            int sobrou = tAditivo + qtdade - MAX_ADITIVO;</span>
-<span class="nc" id="L71">            tAditivo = MAX_ADITIVO;</span>
-<span class="nc" id="L72">            defineSituacao();</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if (tAditivo + qtdade &gt; MAX_ADITIVO) {</span>
+<span class="fc" id="L70">            int sobrou = tAditivo + qtdade - MAX_ADITIVO;</span>
+<span class="fc" id="L71">            tAditivo = MAX_ADITIVO;</span>
+<span class="fc" id="L72">            defineSituacao();</span>
 
-<span class="nc" id="L74">            return qtdade - sobrou;</span>
+<span class="fc" id="L74">            return qtdade - sobrou;</span>
         }
 <span class="fc" id="L76">        tAditivo += qtdade;</span>
 <span class="fc" id="L77">        defineSituacao();</span>
