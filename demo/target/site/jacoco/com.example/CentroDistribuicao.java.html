@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CentroDistribuicao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">CentroDistribuicao.java</span></div><h1>CentroDistribuicao.java</h1><pre class="source lang-java linenums">package com.example;
+
+public class CentroDistribuicao {
+<span class="fc" id="L4">    public enum SITUACAO {</span>
+<span class="fc" id="L5">        NORMAL, SOBRAVISO, EMERGENCIA</span>
+    }
+
+<span class="fc" id="L8">    public enum TIPOPOSTO {</span>
+<span class="fc" id="L9">        COMUM, ESTRATEGICO</span>
+    }
+
+    public static final int MAX_ADITIVO = 500;
+    public static final int MAX_ALCOOL = 2500;
+    public static final int MAX_GASOLINA = 10000;
+
+    private int tAditivo;
+    private int tGasolina;
+    private int tAlcool;
+
+    private SITUACAO situacao;
+
+<span class="fc" id="L22">    public CentroDistribuicao(int tAditivo, int tGasolina, int tAlcool) {</span>
+<span class="pc bpc" id="L23" title="5 of 10 branches missed.">        if (tAditivo &lt; 0 || tAditivo &gt; MAX_ADITIVO || tGasolina &lt; 0 || tGasolina &gt; MAX_GASOLINA || tAlcool &lt; 0</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                || tAlcool &gt; MAX_ALCOOL) {</span>
+<span class="fc" id="L25">            throw new IllegalArgumentException();</span>
+        }
+<span class="fc" id="L27">        this.tAditivo = tAditivo;</span>
+<span class="fc" id="L28">        this.tGasolina = tGasolina;</span>
+<span class="fc" id="L29">        this.tAlcool = tAlcool;</span>
+<span class="fc" id="L30">        defineSituacao();</span>
+<span class="fc" id="L31">    }</span>
+
+    public void defineSituacao() {
+<span class="pc bpc" id="L34" title="5 of 10 branches missed.">        if (tAditivo &lt; 0 || tAditivo &gt; MAX_ADITIVO || tGasolina &lt; 0 || tGasolina &gt; MAX_GASOLINA || tAlcool &lt; 0</span>
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">                || tAlcool &gt; MAX_ALCOOL) {</span>
+<span class="nc" id="L36">            throw new IllegalArgumentException();</span>
+        }
+
+<span class="fc bfc" id="L39" title="All 6 branches covered.">        if (tAditivo &lt; 0.25 * MAX_ADITIVO || tGasolina &lt; 0.25 * MAX_GASOLINA || tAlcool &lt; 0.25 * MAX_ALCOOL) {</span>
+<span class="fc" id="L40">            situacao = SITUACAO.EMERGENCIA;</span>
+<span class="fc bfc" id="L41" title="All 6 branches covered.">        } else if (tAditivo &lt; 0.5 * MAX_ADITIVO || tGasolina &lt; 0.5 * MAX_GASOLINA || tAlcool &lt; 0.5 * MAX_ALCOOL) {</span>
+<span class="fc" id="L42">            situacao = SITUACAO.SOBRAVISO;</span>
+<span class="fc" id="L43">        } else {</span>
+<span class="fc" id="L44">            situacao = SITUACAO.NORMAL;</span>
+        }
+
+<span class="fc" id="L47">    }</span>
+
+    public SITUACAO getSituacao() {
+<span class="fc" id="L50">        return situacao;</span>
+    }
+
+    public int gettGasolina() {
+<span class="nc" id="L54">        return tGasolina;</span>
+    }
+
+    public int gettAditivo() {
+<span class="nc" id="L58">        return tAditivo;</span>
+    }
+
+    public int gettAlcool() {
+<span class="nc" id="L62">        return tAlcool;</span>
+    }
+
+    public int recebeAditivo(int qtdade) {
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">        if (qtdade &lt; 0) {</span>
+<span class="nc" id="L67">            return -1;</span>
+        }
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (tAditivo + qtdade &gt; MAX_ADITIVO) {</span>
+<span class="nc" id="L70">            int sobrou = tAditivo + qtdade - MAX_ADITIVO;</span>
+<span class="nc" id="L71">            tAditivo = MAX_ADITIVO;</span>
+<span class="nc" id="L72">            defineSituacao();</span>
+
+<span class="nc" id="L74">            return qtdade - sobrou;</span>
+        }
+<span class="fc" id="L76">        tAditivo += qtdade;</span>
+<span class="fc" id="L77">        defineSituacao();</span>
+<span class="fc" id="L78">        return qtdade;</span>
+    }
+
+    public int recebeGasolina(int qtdade) {
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (qtdade &lt; 0) {</span>
+<span class="nc" id="L83">            return -1;</span>
+        }
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if (tGasolina + qtdade &gt; MAX_GASOLINA) {</span>
+<span class="nc" id="L86">            int sobrou = tGasolina + qtdade - MAX_GASOLINA;</span>
+<span class="nc" id="L87">            tGasolina = MAX_GASOLINA;</span>
+<span class="nc" id="L88">            defineSituacao();</span>
+
+<span class="nc" id="L90">            return qtdade - sobrou;</span>
+        }
+<span class="fc" id="L92">        tGasolina += qtdade;</span>
+<span class="fc" id="L93">        defineSituacao();</span>
+
+<span class="fc" id="L95">        return qtdade;</span>
+    }
+
+    public int recebeAlcool(int qtdade) {
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">        if (qtdade &lt; 0) {</span>
+<span class="nc" id="L100">            return -1;</span>
+        }
+<span class="fc bfc" id="L102" title="All 2 branches covered.">        if (tAlcool + qtdade &gt; MAX_ALCOOL) {</span>
+<span class="fc" id="L103">            int sobrou = tAlcool + qtdade - MAX_ALCOOL;</span>
+<span class="fc" id="L104">            tAlcool = MAX_ALCOOL;</span>
+<span class="fc" id="L105">            defineSituacao();</span>
+<span class="fc" id="L106">            return qtdade - sobrou;</span>
+        }
+<span class="fc" id="L108">        tAlcool += qtdade;</span>
+<span class="fc" id="L109">        defineSituacao();</span>
+
+<span class="fc" id="L111">        return qtdade;</span>
+    }
+
+    public int[] encomendaCombustivel(int qtdade, TIPOPOSTO tipoPosto) {
+
+<span class="fc" id="L116">        int qtdadeAditivo = (int) (qtdade * 0.05);</span>
+<span class="fc" id="L117">        int qtdadeGasolina = (int) (qtdade * 0.7);</span>
+<span class="fc" id="L118">        int qtdadeAlcool = (int) (qtdade * 0.25);</span>
+
+<span class="pc bpc" id="L120" title="1 of 4 branches missed.">        if (qtdade &lt; 0 || tipoPosto == null) {</span>
+<span class="fc" id="L121">            return new int[] { -7 };</span>
+        }
+
+<span class="fc bfc" id="L124" title="All 4 branches covered.">        if (tipoPosto == TIPOPOSTO.COMUM &amp;&amp; situacao == SITUACAO.EMERGENCIA) {</span>
+<span class="fc" id="L125">            return new int[] { -14 };</span>
+<span class="fc bfc" id="L126" title="All 4 branches covered.">        } else if ((tipoPosto == TIPOPOSTO.COMUM &amp;&amp; situacao == SITUACAO.SOBRAVISO)</span>
+<span class="fc bfc" id="L127" title="All 2 branches covered.">                || situacao == SITUACAO.EMERGENCIA) {</span>
+<span class="fc" id="L128">            qtdadeAditivo = (int) (qtdadeAditivo * 0.5);</span>
+<span class="fc" id="L129">            qtdadeGasolina = (int) (qtdadeGasolina * 0.5);</span>
+<span class="fc" id="L130">            qtdadeAlcool = (int) (qtdadeAlcool * 0.5);</span>
+        }
+
+<span class="pc bpc" id="L133" title="3 of 6 branches missed.">        if (qtdadeAditivo &gt; tAditivo || qtdadeGasolina &gt; tGasolina || qtdadeAlcool &gt; tAlcool) {</span>
+<span class="nc" id="L134">            return new int[] { -21 };</span>
+        } else {
+<span class="fc" id="L136">            tAditivo -= qtdadeAditivo;</span>
+<span class="fc" id="L137">            tGasolina -= qtdadeGasolina;</span>
+<span class="fc" id="L138">            tAlcool -= qtdadeAlcool;</span>
+<span class="fc" id="L139">            defineSituacao();</span>
+
+<span class="fc" id="L141">            return new int[] { tAditivo, tGasolina, tAlcool };</span>
+        }
+
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
