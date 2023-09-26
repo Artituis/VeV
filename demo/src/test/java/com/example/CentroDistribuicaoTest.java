@@ -232,14 +232,14 @@ public class CentroDistribuicaoTest {
 
     @Test
     void C1() {
-        CentroDistribuicao centro = new CentroDistribuicao(500,5000,2500);
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
         centro.recebeGasolina(1000);
         Assertions.assertEquals(SITUACAO.NORMAL, centro.getSituacao());
     }
 
     @Test
     void C2() {
-        CentroDistribuicao centro = new CentroDistribuicao(500,5000,2000);
+        CentroDistribuicao centro = new CentroDistribuicao(500,10000,2500);
         centro.recebeAlcool(1000);
         Assertions.assertEquals(SITUACAO.NORMAL, centro.getSituacao());
     }

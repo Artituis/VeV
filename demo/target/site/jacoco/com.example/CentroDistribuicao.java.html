@@ -82,12 +82,12 @@ public class CentroDistribuicao {
 <span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (qtdade &lt; 0) {</span>
 <span class="nc" id="L83">            return -1;</span>
         }
-<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if (tGasolina + qtdade &gt; MAX_GASOLINA) {</span>
-<span class="nc" id="L86">            int sobrou = tGasolina + qtdade - MAX_GASOLINA;</span>
-<span class="nc" id="L87">            tGasolina = MAX_GASOLINA;</span>
-<span class="nc" id="L88">            defineSituacao();</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        if (tGasolina + qtdade &gt; MAX_GASOLINA) {</span>
+<span class="fc" id="L86">            int sobrou = tGasolina + qtdade - MAX_GASOLINA;</span>
+<span class="fc" id="L87">            tGasolina = MAX_GASOLINA;</span>
+<span class="fc" id="L88">            defineSituacao();</span>
 
-<span class="nc" id="L90">            return qtdade - sobrou;</span>
+<span class="fc" id="L90">            return qtdade - sobrou;</span>
         }
 <span class="fc" id="L92">        tGasolina += qtdade;</span>
 <span class="fc" id="L93">        defineSituacao();</span>
