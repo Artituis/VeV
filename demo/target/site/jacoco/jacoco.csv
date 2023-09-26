@@ -1,7 +1,4 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-demo,default,CentroDistribuicao,355,0,68,0,68,0,44,0,10,0
-demo,default,CentroDistribuicao.SITUACAO,21,0,0,0,2,0,1,0,1,0
-demo,default,CentroDistribuicao.TIPOPOSTO,15,0,0,0,2,0,1,0,1,0
 demo,com.example,CentroDistribuicao.TIPOPOSTO,0,24,0,0,0,2,0,1,0,1
 demo,com.example,CentroDistribuicao.SITUACAO,0,34,0,0,0,2,0,1,0,1
 demo,com.example,CentroDistribuicao,51,304,19,49,15,57,22,22,3,7
